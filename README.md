@@ -1,5 +1,5 @@
 # MAKAZI LINK
-## ABOUT MAKAZI LINK
+### ABOUT MAKAZI LINK
 
 
 *Makazi link is the real estate platform that is ment to connect the real estate owwners and their clients.
