@@ -1,0 +1,66 @@
+
+<%-include('../INCLUDES/head.ejs')%>
+     <section class=" Form my-3 mx-3">
+    <%-include('../INCLUDES/navigationc.ejs')%>
+
+<%-include('../INCLUDES/offcanvas.ejs')%>
+ 
+<% if (house[0]!=='') { %>
+   <div class="row "> 
+     
+    <% for (let houses of house) {%>
+
+      <div class="col-md-4 dis">
+      <div class="centering_card" style="width: 100%;">
+      <div class="card mx-3"  >
+         <h2 class="card-title centering_card"><%=houses.title%></h2>
+         <img style="height:14rem ; width: 18rem;"  class="mx-2 my-1" src="/<%=houses.link%>">
+         <div class="card-body d-flex justify-content-center ">
+           <p class="card-text "><%=houses.description %></p>
+         </div>
+
+         <div class="card-body d-flex justify-content-center ">
+          <p class="card-text "><%=houses.price %> Tsh/month</p>
+        </div>
+         <div class="centering_card pb-1">
+           <a class=""> 
+             <button class="btn btn-success  "> LOCATION</button> 
+             </a>
+             <a href="/ROUTES/admin.js"  class="px-1"> 
+             <button class="btn btn-secondary  ">CONTACTS </button> 
+             </a>
+             <form method="post" action="/list">
+              <input type="hidden" name="houseId" value="<%=houses._id%>" >
+              <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
+              <button class="btn btn-primary  ">Add To List </button> 
+             
+              </form>
+               </div>
+       </div>
+ </div>
+ </div>
+ 
+ <%}%>
+
+ <%} else {%> 
+           <h1 style="color:blue">No product found</h1>
+
+           <% }%>
+   </div>
+  </section>
+ <%-include('../INCLUDES/pagination.ejs')%>
+  
+  <%-include('../INCLUDES/end.ejs') %>
+
+
+
+
+
+
+
+
+
+
+
+
+  

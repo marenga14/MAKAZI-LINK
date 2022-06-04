@@ -1,0 +1,9 @@
+.offcanvas{
+border-radius:0px 20px 20px 0px;
+width:35%;
+position:absolute;
+transform: translate(-50%,-50%);
+
+
+}
+

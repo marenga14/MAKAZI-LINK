@@ -1,0 +1,74 @@
+      .table1 {
+          display: table;
+      }
+      
+      .centering {
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+      }
+      
+      .center {
+          display: table-cell;
+          vertical-align: middle;
+      }
+      
+      .flex1 {
+          display: flex;
+          padding-inline-end: 30px;
+          text-decoration-line: none;
+          text-decoration-style: none;
+          text-decoration: none;
+          color: white;
+      }
+      
+      h5 a:hover {
+          text-decoration: none;
+          color: green;
+      }
+      
+      .pill {
+          border-top-right-radius: 25px;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          border-bottom-right-radius: 25px;
+      }
+      
+      .radius {
+          border-top-right-radius: 8px;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+      }
+      
+      .back1 {
+          background-image: url(Rectangle.png);
+          background-size: cover;
+          background-repeat: no-repeat
+      }
+      
+      .back2 {
+          background-color: #D1DFE8;
+      }
+      
+      .back3 {
+          background-color: #DCD9D9;
+      }
+      
+      .back4 {
+          background-color: #514646FC;
+          background-size: 0rem;
+      }
+      
+      .border {
+          border: none;
+          border-bottom: 2px solid black;
+      }
+      
+      .white {
+          background-color: none,
+      }
+      
+      .black1 {
+          background-color: rgba(0, 0, 0, 0.1);
+      }

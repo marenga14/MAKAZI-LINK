@@ -1,0 +1,15 @@
+.outer-box{
+background-color: burlywood;
+    border: solid black 2px;
+    padding: 50px 50px 50px 50px;
+    border-radius: 2px 2px 2px 2px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.inner-box{
+ padding:5px 5px 5px 5px;
+
+}

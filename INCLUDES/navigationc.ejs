@@ -1,0 +1,44 @@
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success nav2 fixed">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <a class="navbar-brand" href="#">MAKAZI || LINK</a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a  class="nav-link padd text-white <%=path === '/home' ? 'active' : '' %>" href="/home">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class=" nav-link padd <%= path ==='addHouse' ? 'active' :'' %>" href="/addHouse">Add house
+                    </a>
+                   </li>
+                        <li class="nav-item"> 
+                        <a class="nav-link padd <%= path==='/admin/edit' ? 'active':''%> " href="/admin/edit">Admin House
+                    </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link padd <%= path==='/viewlist' ? 'active':''%> " href="/viewlist">View List
+                </a>
+            </li>
+            <form action="/orders" method="POST">
+                <input type="hidden" name="_csrf" value="<%=csrfToken%>" > 
+                <button   class=" flex1 rounded-pill btn  pill ">Orders</button>
+         
+            </form>
+                <form action="/admin/logout" method="post">
+                    <input type="hidden" name="_csrf" value="<%=csrfToken%>" > 
+    
+                     <button   class=" flex1 rounded-pill btn  pill ">LOG OUT</button>
+                
+                </form>
+    
+                </ul>
+            </div>
+    </nav>
+ 

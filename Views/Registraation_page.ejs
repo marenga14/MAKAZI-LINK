@@ -1,0 +1,70 @@
+ <%-include('../INCLUDES/head.ejs')%>
+	 
+	<section class="Form my-5 mx-4 ">
+	<div class="container">
+   <div class="row no-gutter bg-info radius2 ">
+	<div class="col-md-3 bg-info radius3 cover back ">
+		<div class="nav-item">
+			<span class="nav-brand d-flex justify-content-center pt-5"><img src="OIP[1].jp" alt="here" style="height: 80px;"></span>
+		</div>
+
+		<div class="text-white ">
+			<p><h3><span>"We get</span></h3><h3> <span>you</span></h3><h3><span> connected"</span></h3></p>
+		</div>
+		</div>
+		<div class="col-md-9 bg-light pt-5 radius1">
+			<h2>Create your account now</h2>
+			 
+			<form method="POST" action="/disp">
+					<div class="form-row"> 
+				<div class="col-lg-9  pb-5 pt-3 text-center">
+				<input class="form-control  border-top-0 border-end-0 border-start-0 border-bottom-5" value="<%=fname%>" type="text" name="fname" placeholder="First name">
+				</div>
+				</div>
+        <div class="form-row"> 
+          <div class="col-lg-9  pb-5 pt-3 text-center">
+          <input class="form-control  border-top-0 border-end-0 border-start-0 border-bottom-5" type="text" name="lname" value="<%=lname%>" placeholder="Last name">
+
+          </div>
+          </div>
+
+          
+				  <div class="form-row"> 
+            <div class="col-sm-9  pb-5 ">
+              <input class="<%=validationError.find(e =>e.param ==='email')? 'invalid':'' %> form-control" type="email" value="<%=email%>" name="email" placeholder="Email">
+              </div>
+              </div>
+  
+
+				  <div class="form-row"> 
+				<div class="col-lg-9  pb-5 ">
+					<input class="form-control   border-bottom-5 
+					
+					<%=validationError.find(e =>e.param ==='pass')? 'invalid':'' %>" value="<%=pass%>" type="password" name="pass" placeholder="password">
+					</div>
+					</div>
+
+          
+				  <div class="form-row"> 
+            <div class="col-lg-9  pb-5 ">
+              <input class="form-control     border-bottom-5 <%=validationError.find(e =>e.param ==='passconfirm')? 'invalid':'' %>" type="password" name="passconfirm" placeholder=" confirm password" value="<%=passconfirm%>" >
+              </div>
+              </div> 
+			  <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
+				 <div class="form-row"> 
+				<div class="col-lg-9 d-flex justify-content-center pb-5">
+				<button style="width:15rem" type="submit" class="btn form-control bg-info rounded-pill text-white ">REGISTER</button>
+				</div>
+			 </div>
+
+
+			  
+				 </form>
+				 </div>
+				 </div>
+			 </div>
+	 </section>
+                                                                               
+
+
+	 <%-include('../INCLUDES/end.ejs')%>

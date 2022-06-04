@@ -1,0 +1,36 @@
+
+<div class="offcanvas offcanvas-start offcanvass" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-white" id="offcanvasScrollingLabel">DASHBOARD</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+  
+    <div class="offcanvas-body">
+      <ul class="off-nav">
+        <li class="nav-item ">
+            <a class="nav-link padd text-white >" href="#">Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class=" text-white nav-link padd <%= path ==='/addHouse' ? 'active' :'' %>" href="/addHouse">Add house
+        </a>
+       </li>
+            <li class="nav-item">
+            <a class="nav-link padd text-white <%=path=='/admin/edit' ? 'active': ''%>" href="/admin/edit">Admin Product</a> 
+    </li>
+    <form action="/admin/logout" method="post">
+        <input type="hidden" name="_csrf" value="<%=csrfToken%>" > 
+  
+         <button   class=" flex1 rounded-pill btn text-white pill ">LOG OUT</button>
+    
+    </form>
+  
+    </ul>
+  
+     
+    </div>
+  </div>
+   
+   
+  
+  

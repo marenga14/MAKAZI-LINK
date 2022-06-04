@@ -1,0 +1,70 @@
+<%-include('../INCLUDES/head.ejs') %>
+<%-include('../INCLUDES/navigationc.ejs')%> 
+
+<section class="mt-5 pt-1 mx-2">
+
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+          <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <% for (let lists of list) {%>
+        <tbody>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <p class="fw-bold mb-1"><%=lists.houseId.title%></p>
+                   
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><%=lists.quantity%></p>
+               
+            </td>
+
+            <td>
+                <p class="fw-normal mb-1">
+                    <%=lists.houseId.price%>Tsh/month</p>
+                 
+              </td>
+            
+            <td>
+                <form action="/deleteList" method="post">
+                    <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
+                    <input type="hidden" name="houseId" value="<%=lists.houseId._id%>" 
+                    >
+              <button type="submit" class="btn btn-danger btn-sm btn-rounded">
+          
+            DELETE
+              </button>
+            </form>
+            </td>
+          </tr>    
+        </tbody>
+        <%}%>
+      </table>
+    
+<!-- <form action="/order-items" method="post">
+  <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
+
+<div class="d-flex justify-content-center my-5">
+      <button type="submit" class="btn btn-info  btn-sm btn-rounded">
+        ORDER NOW
+          </button>
+          
+</div>
+</form> -->
+
+
+
+<div class="d-flex justify-content-center my-5">
+<a class=" btn   justify-content-start text-dark text-uppercase mb-0" href="/checkout" style=" border:2px solid white">ORDER NOW</a>
+</div>
+</section>
+<%-include('../INCLUDES/end.ejs') %>

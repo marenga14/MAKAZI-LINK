@@ -1,0 +1,36 @@
+ body{ background-color:grey;
+   position: relative;
+   padding: 0;
+   margin: 0;
+   font-family: "Lato", sans-serif;
+ }
+.radius1{
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+padding-left: 40px;
+
+}
+
+.radius2{
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+.radius3{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.cover{
+  
+  background-image: url(second.svg);
+}
+
+.back{ background-size: cover;
+    background-repeat: no-repeat;
+ 
+ 
+  
+}

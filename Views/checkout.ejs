@@ -1,0 +1,58 @@
+<%-include('../INCLUDES/head.ejs')%>
+<%-include('../INCLUDES/navigationc.ejs')%>
+
+
+ 
+
+<section class="h-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-10 col-xl-8">
+          <div class="card" style="border-radius: 10px;">
+            <div class="card-header px-4 py-5 ">
+              <h5 class="text- mb-2 ">Thanks for your Order, <span  >MARENGA</span>!</h5>
+            </div>
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <p class="lead fw-normal mb-0 " style="color: #a8729a;">Receipt</p>
+                <p class="small text-muted mb-0">Receipt Voucher : Holla</p>
+              </div>
+
+              
+ 
+  
+              <div class="d-flex justify-content-between pt-2">
+                <p class="fw-bold mb-0">Order Details</p>
+                <p class="text-muted mb-0"><span class="fw-bold me-4">Total</span>  </p>
+              </div>
+  
+                   <div class="d-flex justify-content-between mb-5">
+                <p class="text-muted mb-0">Recepits Voucher : 18KU-62IIK</p>
+                <p class="text-muted mb-0"><span class="fw-bold me-4">Delivery Charges</span> Free</p>
+              </div>
+            </div>
+            <div class="card-footer border-0 px-4 py-5 bg-success" style="background-colo: #a8729a; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+              <h5 class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">Total  <span class="h2 mb-0 ms-2"> $<%=totalsum%></span></h5>
+
+                  
+                    <form action="/order-items" method="POST">
+                      <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
+                      <script
+                           src="https://checkout.stripe.com/checkout.js " class="stripe-button"
+                           data-key="pk_test_51KohdAF6FyrZ5dlzOXRbywqqYOycByYCPuggJXxvMTNWmyXPbIPNUYXYBItNyYx5276PGY365J8LckVu9kTWw5Pv00gTlp7z13"
+                           data-amount="<%= totalsum *100 %>"
+                           data-name="your payments are here"
+                           data-description=""
+                           data-image=""
+                           data-locale="auto"
+                           data-currecy="usd">
+
+
+                      </script>
+                      
+                    </form>
+            </div>
+                  </section>
+         
+ 
+<%-include('../INCLUDES/end.ejs')%>

@@ -1,0 +1,50 @@
+ <%-include('../INCLUDES/head.ejs')%>
+<%-include('../INCLUDES/navigationc.ejs')%>
+<div class="offcanvas offcanvas-start offcanvass" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-white" id="offcanvasScrollingLabel">DASHBOARD</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="off-nav">
+      <li class="nav-item">
+          <a class="nav-link padd text-white <%=path==='/home'? 'active':''%>" href="/home">Home
+          </a>
+      </li>
+     
+  <form action="/admin/logout" method="post">
+      <input type="hidden" name="_csrf" value="<%=csrfToken%>" > 
+
+       <button   class=" flex1 rounded-pill btn btn-dark pill ">LOG OUT</button>
+  
+  </form>
+
+  </ul>
+</div>
+   
+  </div>
+    <% for (let houses of house) {%>
+ <div class="centering_card">
+     <div class="card" style="width: 18rem;">
+         <h2 class="card-title centering_card"><%= houses.title %></h2>
+          <img class="card-img-top" src="/<%=houses.link%>" alt="nothing!!!!">
+         <div class="card-body ">
+           <p class="card-text "><%=houses.description %></p>
+         </div>
+         <div class="centering_card pb-2 pr-5">
+            <a class="pr-3" href="/admin/edit_house?id=<%=houses._id%>"><button  name="id" class="btn btn-success  "> EDIT </button> </a>
+            <a href="/admin/delete_house?id=<%=houses._id%>"><button  name="id" class="btn  btn-info ">DELETE</button> </a>
+               </div>   
+          </div>
+       </div>
+ 
+ <%}%>
+ 
+ 
+ <%-include('../INCLUDES/pagination.ejs')%>
+ <%-include('../INCLUDES/end.ejs')%>
+     
+
+
+ 
