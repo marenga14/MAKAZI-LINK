@@ -32,17 +32,6 @@ redirect(app);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 const multer =require('multer')
 
 
@@ -166,7 +155,7 @@ res.status(400).render('error',{pageTitle:'page not found'});
 
 
 db();
-   app.listen(5000,()=>{
+   app.listen(5002,()=>{
       console.log('server is listening')
    });
 //  })

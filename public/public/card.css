@@ -20,16 +20,8 @@ padding-top: 10px;
 }
 
 .backg{
-background: #7b7b7c 50% no-repeat url(/r-architecture-JvQ0Q5IkeMM-unsplash.jpg);
-background-size: cover;
--webkit-animation: 30s linear infinite a;
-animation: 30s linear infinite a;
-background-size: cover;
-height: 100%;
-left: 0;
-position: absolute;
-top: 0;
-width: calc(100vw + 500px);
+    background-image:linear-gradient(to right,#000000,#004e92);
+ 
 }
 
 
@@ -78,12 +70,7 @@ width: calc(100vw + 500px);
 
 
 
- body{   /*background-color: rgba(0, 55, 72, 0.856); */
-    background-color: rgba(15, 5, 20, 0.6);
-     background-image: url(/white.jpg); 
-    background-size: cover;
-    background-repeat: no-repeat;
-
+ body{  background-color: white;
  }
 
 

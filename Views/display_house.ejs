@@ -1,6 +1,6 @@
 
 <%-include('../INCLUDES/head.ejs')%>
-     <section class=" Form my-3 mx-3">
+     <section class=" Form my- mx-">
     <%-include('../INCLUDES/navigationc.ejs')%>
 
 <%-include('../INCLUDES/offcanvas.ejs')%>
@@ -12,7 +12,7 @@
 
       <div class="col-md-4 dis">
       <div class="centering_card" style="width: 100%;">
-      <div class="card mx-3"  >
+      <div class="card mx-3 shadow-lg "  >
          <h2 class="card-title centering_card"><%=houses.title%></h2>
          <img style="height:14rem ; width: 18rem;"  class="mx-2 my-1" src="/<%=houses.link%>">
          <div class="card-body d-flex justify-content-center ">
@@ -24,11 +24,11 @@
         </div>
          <div class="centering_card pb-1">
            <a class=""> 
-             <button class="btn btn-success  "> LOCATION</button> 
+             <button class="btn btn-success me-2 "> LOCATION</button> 
              </a>
-             <a href="/ROUTES/admin.js"  class="px-1"> 
+             <!-- <a href="/ROUTES/admin.js"  class="px-1"> 
              <button class="btn btn-secondary  ">CONTACTS </button> 
-             </a>
+             </a> -->
              <form method="post" action="/list">
               <input type="hidden" name="houseId" value="<%=houses._id%>" >
               <input type="hidden" name="_csrf" value="<%=csrfToken%>" >
